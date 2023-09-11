@@ -35,6 +35,11 @@ namespace Codecool.CodecoolShop.Controllers
         {
             return View();
         }
+
+        public IActionResult Cart()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
