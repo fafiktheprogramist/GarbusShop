@@ -33,7 +33,8 @@ namespace Codecool.CodecoolShop.Controllers
 
         public IActionResult Categories()
         {
-            return View();
+            var products = ProductService.GetProductsForCategory(1);
+            return View(products.ToList());
         }
 
         public IActionResult Cart()

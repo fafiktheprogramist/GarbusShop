@@ -69,7 +69,7 @@ namespace Codecool.CodecoolShop
             supplierDataStore.Add(amazon);
             Supplier lenovo = new Supplier { Name = "Lenovo", Description = "Computers" };
             supplierDataStore.Add(lenovo);
-            Supplier oppo = new Supplier { Name = "Oppo", Description = "Phones" };
+            Supplier oppo = new Supplier { Name = "Oppo", Description = "Phone" };
             supplierDataStore.Add(oppo);
             ProductCategory tablet = new ProductCategory { Name = "Tablet", Department = "Hardware", Description = "A tablet computer, commonly shortened to tablet, is a thin, flat mobile computer with a touchscreen display." };
             productCategoryDataStore.Add(tablet);
