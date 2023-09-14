@@ -17,13 +17,15 @@ namespace Codecool.CodecoolShop.Controllers
         private readonly ILogger<ProductController> _logger;
         public ProductService ProductService { get; set; }
 
+       
+
         public ProductController(ILogger<ProductController> logger)
         {
             _logger = logger;
             ProductService = new ProductService(
                 ProductDaoMemory.GetInstance(),
                 ProductCategoryDaoMemory.GetInstance());
-        }
+        }    
 
         public IActionResult Index()
         {
@@ -31,10 +33,11 @@ namespace Codecool.CodecoolShop.Controllers
             return View(products.ToList());
         }
 
-        public IActionResult Categories()
+        public IActionResult Categories(int category = 1)
         {
-            var products = ProductService.GetProductsForCategory(1);
-            return View(products.ToList());
+
+            var products = ProductService.GetProductsForCategory(category);
+            return View( products.ToList());
         }
 
         public IActionResult Cart()

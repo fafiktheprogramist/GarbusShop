@@ -12,6 +12,7 @@ namespace Codecool.CodecoolShop.Daos.Implementations
         {
         }
 
+
         public static ProductCategoryDaoMemory GetInstance()
         {
             if (instance == null)

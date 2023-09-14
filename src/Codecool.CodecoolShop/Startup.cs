@@ -67,18 +67,27 @@ namespace Codecool.CodecoolShop
 
             Supplier amazon = new Supplier { Name = "Amazon", Description = "Digital content and services" };
             supplierDataStore.Add(amazon);
+
             Supplier lenovo = new Supplier { Name = "Lenovo", Description = "Computers" };
             supplierDataStore.Add(lenovo);
+
             Supplier oppo = new Supplier { Name = "Oppo", Description = "Phone" };
             supplierDataStore.Add(oppo);
+            
             ProductCategory tablet = new ProductCategory { Name = "Tablet", Department = "Hardware", Description = "A tablet computer, commonly shortened to tablet, is a thin, flat mobile computer with a touchscreen display." };
             productCategoryDataStore.Add(tablet);
-            ProductCategory phone = new ProductCategory { Name = "Phone", Department = "Hardware", Description = "A cell phone, device primary designed to make calls but having the same functionalities as tablet." };
+
+            ProductCategory phone = new ProductCategory { Name = "Phone", Department = "Hardware", Description = "A cell phone, device primary designed to make calls but have the same functionalities as tablet." };
             productCategoryDataStore.Add(phone);
+
+            ProductCategory desktop = new ProductCategory { Name = "Desktop", Department = "Hardware", Description = "A desktop computer (often abbreviated desktop) is a personal computer designed for regular use at a stationary location on or near a desk (as opposed to a portable computer) due to its size and power requirements." };
+            productCategoryDataStore.Add(desktop);
+
             productDataStore.Add(new Product { Name = "Amazon Fire", DefaultPrice = 49.9m, Currency = "USD", Description = "Fantastic price. Large content ecosystem. Good parental controls. Helpful technical support.", ProductCategory = tablet, Supplier = amazon });
             productDataStore.Add(new Product { Name = "Lenovo IdeaPad Miix 700", DefaultPrice = 479.0m, Currency = "USD", Description = "Keyboard cover is included. Fanless Core m5 processor. Full-size USB ports. Adjustable kickstand.", ProductCategory = tablet, Supplier = lenovo });
             productDataStore.Add(new Product { Name = "Amazon Fire HD 8", DefaultPrice = 89.0m, Currency = "USD", Description = "Amazon's latest Fire HD 8 tablet is a great value for media consumption.", ProductCategory = tablet, Supplier = amazon });
-            productDataStore.Add(new Product { Name = "Oppo A1K", DefaultPrice = 500m, Currency = "USD", Description = "Basic model of cell phone from Oppo sroppo", ProductCategory = tablet, Supplier = lenovo });
+            productDataStore.Add(new Product { Name = "Oppo A1K", DefaultPrice = 500m, Currency = "USD", Description = "Basic model of cell phone from Oppo sroppo", ProductCategory = phone, Supplier = lenovo });
+            productDataStore.Add(new Product { Name = "Lenovo 2022 Newest Ideapad 3 Laptop", DefaultPrice = 394m , Currency = "USD", Description = "Memory is 8GB high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once. Hard Drive is 256GB PCIe Solid State Drive which allows to fast bootup and data transfer.", ProductCategory = desktop, Supplier = lenovo});
         }
     }
 }
