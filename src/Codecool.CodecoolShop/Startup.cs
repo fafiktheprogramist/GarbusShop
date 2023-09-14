@@ -86,7 +86,7 @@ namespace Codecool.CodecoolShop
             productDataStore.Add(new Product { Name = "Amazon Fire", DefaultPrice = 49.9m, Currency = "USD", Description = "Fantastic price. Large content ecosystem. Good parental controls. Helpful technical support.", ProductCategory = tablet, Supplier = amazon });
             productDataStore.Add(new Product { Name = "Lenovo IdeaPad Miix 700", DefaultPrice = 479.0m, Currency = "USD", Description = "Keyboard cover is included. Fanless Core m5 processor. Full-size USB ports. Adjustable kickstand.", ProductCategory = tablet, Supplier = lenovo });
             productDataStore.Add(new Product { Name = "Amazon Fire HD 8", DefaultPrice = 89.0m, Currency = "USD", Description = "Amazon's latest Fire HD 8 tablet is a great value for media consumption.", ProductCategory = tablet, Supplier = amazon });
-            productDataStore.Add(new Product { Name = "Oppo A1K", DefaultPrice = 500m, Currency = "USD", Description = "Basic model of cell phone from Oppo sroppo", ProductCategory = phone, Supplier = lenovo });
+            productDataStore.Add(new Product { Name = "Oppo A1K", DefaultPrice = 500m, Currency = "USD", Description = "Basic model of cell phone from Oppo sroppo", ProductCategory = phone, Supplier = oppo });
             productDataStore.Add(new Product { Name = "Lenovo 2022 Newest Ideapad 3 Laptop", DefaultPrice = 394m , Currency = "USD", Description = "Memory is 8GB high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once. Hard Drive is 256GB PCIe Solid State Drive which allows to fast bootup and data transfer.", ProductCategory = desktop, Supplier = lenovo});
         }
     }
