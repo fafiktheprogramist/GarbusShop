@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Codecool.CodecoolShop.Models
@@ -13,6 +14,11 @@ namespace Codecool.CodecoolShop.Models
         {
             ProductCategory = productCategory;
             ProductCategory.Products.Add(this);
+        }
+
+        internal Product find(string id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
