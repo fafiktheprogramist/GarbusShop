@@ -16,8 +16,9 @@
             <th>Photo</th>
             <th>Unit Price</th>
             <th>Quantity</th>
+            <th>Add</th>
+            <th>Add</th>
             <th>Price</th>
-            <th>Sub Total</th>
         </tr>
         @foreach (var item in ViewBag.cart)
         {
@@ -28,6 +29,8 @@
                 <td><img src="../img/@(item.Product.Name).jpg" width="60" /></td>
                 <td>@item.Product.DefaultPrice</td>
                 <td>@item.Quantity</td>
+                <td><a asp-controller="cart" asp-action="buy" asp-route-id="@item.Product.Id">+</a></td>
+                <td><a asp-controller="cart" asp-action="substract" asp-route-id="@item.Product.Id">-</a></td>
                 <td>@(item.Product.DefaultPrice * item.Quantity)</td>
             </tr>
         }

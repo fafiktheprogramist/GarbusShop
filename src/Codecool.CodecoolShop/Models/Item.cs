@@ -1,4 +1,6 @@
-﻿namespace Codecool.CodecoolShop.Models
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Codecool.CodecoolShop.Models
 {
     public class Item : Product
     {
