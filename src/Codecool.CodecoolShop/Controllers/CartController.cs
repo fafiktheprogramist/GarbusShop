@@ -75,11 +75,16 @@ namespace Codecool.CodecoolShop.Controllers
             int index = isExist(Convert.ToInt32(id));
             if (index != -1)
             {
-                cart[index].Quantity--;
-            }
-            else
-            {
-                Remove(id);
+                if (cart[index].Quantity == 1)
+                {
+                    cart.RemoveAt(index);
+                    SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    cart[index].Quantity--;
+                }
             }
             SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
             return RedirectToAction("Index");
