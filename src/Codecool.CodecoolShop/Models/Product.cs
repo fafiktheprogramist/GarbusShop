@@ -16,9 +16,9 @@ namespace Codecool.CodecoolShop.Models
             ProductCategory.Products.Add(this);
         }
 
-        internal Product find(string id)
-        {
-            throw new NotImplementedException();
-        }
+        //internal Product find(string id)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

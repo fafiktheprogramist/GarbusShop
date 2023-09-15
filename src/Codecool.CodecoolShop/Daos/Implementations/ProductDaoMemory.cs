@@ -55,5 +55,6 @@ namespace Codecool.CodecoolShop.Daos.Implementations
         {
             return data.Where(x => x.ProductCategory.Id == productCategory.Id);
         }
+
     }
 }

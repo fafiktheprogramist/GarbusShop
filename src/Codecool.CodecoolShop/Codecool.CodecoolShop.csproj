@@ -13,10 +13,14 @@
     <EmbeddedResource Remove="Nowy folder2\**" />
     <None Remove="Nowy folder1\**" />
     <None Remove="Nowy folder2\**" />
+    <None Remove="Views\Cart\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Cart\" />
+  </ItemGroup>
 </Project>

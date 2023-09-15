@@ -50,7 +50,7 @@ namespace Codecool.CodecoolShop.Controllers
 
         public IActionResult Cart()
         {
-            return View();
+            return RedirectToAction("Index", "Cart");
         }
         public IActionResult Privacy()
         {

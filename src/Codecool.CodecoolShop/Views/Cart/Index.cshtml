@@ -5,7 +5,7 @@
 
 <p>This is the page to display products added to cart by a user.</p>
 
-@* <body>
+ <body>
 
     <h3>Cart Page</h3>
     <table cellpadding="2" cellspacing="2" border="1">
@@ -24,10 +24,10 @@
                 <td><a asp-controller="cart" asp-action="remove" asp-route-id="@item.Product.Id">Remove</a></td>
                 <td>@item.Product.Id</td>
                 <td>@item.Product.Name</td>
-                <td><img src="~/images/@item.Product.Photo" width="60" /> </td>
-                <td>@item.Product.Price</td>
+                @*<td><img src="~/images/@item.Product.Photo" width="60" /> </td>*@
+                <td>@item.Product.DefaultPrice</td>
                 <td>@item.Quantity</td>
-                <td>@(item.Product.Price * item.Quantity)</td>
+                <td>@(item.Product.DefaultPrice * item.Quantity)</td>
             </tr>
         }
         <tr>
@@ -40,4 +40,4 @@
     <br>
     <a asp-controller="product" asp-action="index">Continue Shopping</a>
 
-</body> *@
+</body> 
