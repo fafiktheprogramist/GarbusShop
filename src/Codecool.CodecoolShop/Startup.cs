@@ -68,29 +68,70 @@ namespace Codecool.CodecoolShop
             IProductCategoryDao productCategoryDataStore = ProductCategoryDaoMemory.GetInstance();
             ISupplierDao supplierDataStore = SupplierDaoMemory.GetInstance();
 
-            Supplier amazon = new Supplier { Name = "Amazon", Description = "Digital content and services" };
-            supplierDataStore.Add(amazon);
 
-            Supplier lenovo = new Supplier { Name = "Lenovo", Description = "Computers" };
-            supplierDataStore.Add(lenovo);
 
-            Supplier oppo = new Supplier { Name = "Oppo", Description = "Phone" };
-            supplierDataStore.Add(oppo);
-            
-            ProductCategory tablet = new ProductCategory { Name = "Tablet", Department = "Hardware", Description = "A tablet computer, commonly shortened to tablet, is a thin, flat mobile computer with a touchscreen display." };
-            productCategoryDataStore.Add(tablet);
+            Supplier ronal = new Supplier { Name = "Ronal", Description = "Producent of rims" };
+            supplierDataStore.Add(ronal);
 
-            ProductCategory phone = new ProductCategory { Name = "Phone", Department = "Hardware", Description = "A cell phone, device primary designed to make calls but have the same functionalities as tablet." };
-            productCategoryDataStore.Add(phone);
+            Supplier dotz = new Supplier { Name = "Dotz", Description = "Producent of rims" };
+            supplierDataStore.Add(dotz);
 
-            ProductCategory desktop = new ProductCategory { Name = "Desktop", Department = "Hardware", Description = "A desktop computer (often abbreviated desktop) is a personal computer designed for regular use at a stationary location on or near a desk (as opposed to a portable computer) due to its size and power requirements." };
-            productCategoryDataStore.Add(desktop);
+            Supplier autec = new Supplier { Name = "Autec", Description = "Rims" };
+            supplierDataStore.Add(autec);
 
-            productDataStore.Add(new Product { Name = "Amazon Fire", DefaultPrice = 49.9m, Currency = "USD", Description = "Fantastic price. Large content ecosystem. Good parental controls. Helpful technical support.", ProductCategory = tablet, Supplier = amazon });
-            productDataStore.Add(new Product { Name = "Lenovo IdeaPad Miix 700", DefaultPrice = 479.0m, Currency = "USD", Description = "Keyboard cover is included. Fanless Core m5 processor. Full-size USB ports. Adjustable kickstand.", ProductCategory = tablet, Supplier = lenovo });
-            productDataStore.Add(new Product { Name = "Amazon Fire HD 8", DefaultPrice = 89.0m, Currency = "USD", Description = "Amazon's latest Fire HD 8 tablet is a great value for media consumption.", ProductCategory = tablet, Supplier = amazon });
-            productDataStore.Add(new Product { Name = "Oppo A1K", DefaultPrice = 500m, Currency = "USD", Description = "Basic model of cell phone from Oppo sroppo", ProductCategory = phone, Supplier = oppo });
-            productDataStore.Add(new Product { Name = "Lenovo 2022 Newest Ideapad 3 Laptop", DefaultPrice = 394m , Currency = "USD", Description = "Memory is 8GB high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once. Hard Drive is 256GB PCIe Solid State Drive which allows to fast bootup and data transfer.", ProductCategory = desktop, Supplier = lenovo});
+            Supplier alutec = new Supplier { Name = "Alutec", Description = "Rims" };
+            supplierDataStore.Add(alutec);
+
+            Supplier pirelli = new Supplier { Name = "Pirelli", Description = "Producent of tires" };
+            supplierDataStore.Add(pirelli);
+
+            Supplier dezent = new Supplier { Name = "Dezent", Description = "Producent of rims" };
+            supplierDataStore.Add(dezent);
+
+            Supplier rial = new Supplier { Name = "Rial", Description = "Producent of rims" };
+            supplierDataStore.Add(rial);
+
+            ProductCategory rims = new ProductCategory { Name = "Rims", Department = "Wheel", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            productCategoryDataStore.Add(rims);
+
+            ProductCategory tires = new ProductCategory { Name = "Tires", Department = "Tire", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            productCategoryDataStore.Add(tires);
+
+            ProductCategory trunk = new ProductCategory { Name = "Trunk", Department = "Luggage", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            productCategoryDataStore.Add(trunk);
+
+            ProductCategory accessories = new ProductCategory { Name = "Trunk", Department = "Accessories", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            productCategoryDataStore.Add(accessories);
+
+            productDataStore.Add(new Product { Name = "Alutec Grip Polar", DefaultPrice = 399.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = alutec });
+            productDataStore.Add(new Product { Name = "Alutec Grip", DefaultPrice = 379.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = alutec });
+            productDataStore.Add(new Product { Name = "Autec Skandic Dark", DefaultPrice = 379.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = autec });
+            productDataStore.Add(new Product { Name = "Autec Skandic", DefaultPrice = 369.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = autec });
+            productDataStore.Add(new Product { Name = "Autec Xenos Dark", DefaultPrice = 499.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = autec });
+            productDataStore.Add(new Product { Name = "Dezent Ta Dark", DefaultPrice = 699.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dezent });
+            productDataStore.Add(new Product { Name = "Dezent Ty Graphite", DefaultPrice = 589.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dezent });
+            productDataStore.Add(new Product { Name = "Dezent Ty", DefaultPrice = 589.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dezent });
+            productDataStore.Add(new Product { Name = "Dezent Tz Graphite", DefaultPrice = 389.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dezent });
+            productDataStore.Add(new Product { Name = "Dezent Tz", DefaultPrice = 389.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dezent });
+            productDataStore.Add(new Product { Name = "Dotz Dakar Dark", DefaultPrice = 385.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dotz });
+            productDataStore.Add(new Product { Name = "Dotz Dakar", DefaultPrice = 385.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dotz });
+            productDataStore.Add(new Product { Name = "Dotz Modular", DefaultPrice = 395.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dotz });
+            productDataStore.Add(new Product { Name = "Dotz Pharao Dark", DefaultPrice = 499.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dotz });
+            productDataStore.Add(new Product { Name = "Dotz Pharao", DefaultPrice = 499.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dotz });
+            productDataStore.Add(new Product { Name = "Rial Astorga", DefaultPrice = 650.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = rial });
+            productDataStore.Add(new Product { Name = "Rial Kodiak Graphite", DefaultPrice = 439.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = rial });
+            productDataStore.Add(new Product { Name = "Rial Kodiak", DefaultPrice = 439.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = rial });
+            productDataStore.Add(new Product { Name = "Rial Lucca Polar", DefaultPrice = 599.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = rial });
+            productDataStore.Add(new Product { Name = "Rial Milano", DefaultPrice = 699.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = rial });
+            productDataStore.Add(new Product { Name = "Ronal R46 Grey", DefaultPrice = 399.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
+            productDataStore.Add(new Product { Name = "Ronal R46 Jetblack", DefaultPrice = 465.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
+            productDataStore.Add(new Product { Name = "Ronal R54 Jetblack", DefaultPrice = 479.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
+            productDataStore.Add(new Product { Name = "Ronal R56", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
+
+            productDataStore.Add(new Product { Name = "Pirelli P7 Cinturato", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = tires, Supplier = pirelli });
+
         }
+
     }
-}
+    }
+
