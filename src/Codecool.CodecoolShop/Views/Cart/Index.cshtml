@@ -8,6 +8,8 @@
  <body>
 
     <h3>Cart Page</h3>
+    @if (ViewBag.cart != null && ViewBag.cart.Count > 0)
+    {
     <table cellpadding="2" cellspacing="2" border="1">
         <tr>
             <th>Option</th>
@@ -40,7 +42,14 @@
                 @ViewBag.total
             </td>
         </tr>
-    </table>
+        </table>
+    }
+    else
+    {
+        <p>
+            Your cart is empty.
+        </p>
+    }
     <br>
     <a asp-controller="product" asp-action="index">Continue Shopping</a>
     <br>
