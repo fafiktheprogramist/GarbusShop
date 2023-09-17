@@ -17,8 +17,8 @@ namespace Codecool.CodecoolShop.Controllers
     {
         public ProductService ProductService { get; set; }
 
-        [Route("index")]
-        public IActionResult Index()
+        [Route("cart")]
+        public IActionResult Cart()
         {
             List<Item> cart = SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
             if (ViewBag.cart != null)
@@ -58,7 +58,7 @@ namespace Codecool.CodecoolShop.Controllers
                 }
                 SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Cart");
         }
 
         [Route("remove/{id}")]
