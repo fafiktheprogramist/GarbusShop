@@ -68,7 +68,7 @@ namespace Codecool.CodecoolShop.Controllers
             int index = isExist(Convert.ToInt32(id));
             cart.RemoveAt(index);
             SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
-            return RedirectToAction("Index");
+            return RedirectToAction("Cart");
         }
 
         // [Route("substract/{id}")]
@@ -82,7 +82,7 @@ namespace Codecool.CodecoolShop.Controllers
                 {
                     cart.RemoveAt(index);
                     SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Cart");
                 }
                 else
                 {
@@ -90,7 +90,7 @@ namespace Codecool.CodecoolShop.Controllers
                 }
             }
             SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
-            return RedirectToAction("Index");
+            return RedirectToAction("Cart");
         }
 
 
