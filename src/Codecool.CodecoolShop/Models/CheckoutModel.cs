@@ -58,8 +58,10 @@ namespace Codecool.CodecoolShop.Models
         [StringLength(5)]
         public string NumberShip { get; set; } = "";
 
-        public string successMessage = "";
-        public string errorMessage = "";
+        public string successMessage { get; set; } = "Validation success!"; 
+        public string errorMessage { get; set; } = "Validation failure!";
+
+
 
     }
 }
