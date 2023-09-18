@@ -7,64 +7,59 @@ namespace Codecool.CodecoolShop.Models
 {
     public class CheckoutModel : BaseModel
     {
+        
         [Required(ErrorMessage = "The first name is required")]
+        [StringLength(20)]
+
         public string FirstName { get; set; } = "";
-         public string LastName { get; set; } = "";
-         public string Email { get; set; } = "";
-         public string PhoneNumber { get; set; } = "";
-         public string CountryBill { get; set; } = "";
-         public string CityBill { get; set; } = "";
-         public string ZipCodeBill { get; set; } = "";
+
+        [Required(ErrorMessage = "The last name is required")]
+        [StringLength(20)]
+        public string LastName { get; set; } = "";
+        
+        [Required(ErrorMessage = "The email is required")]
+        [EmailAddress]
+        public string Email { get; set; } = "";
+
+        [Required(ErrorMessage = "The phone number is required")]
+        [Phone]
+        public string PhoneNumber { get; set; } = "";
+
+        [StringLength(20)]
+        public string CountryBill { get; set; } = "";
+
+        [StringLength(20)]
+        public string CityBill { get; set; } = "";
+
+        [StringLength(6)]
+        public string ZipCodeBill { get; set; } = "";
+
+        [StringLength(20)]
         public string StreetBill { get; set; } = "";
+
+        [StringLength(5)]
         public string NumberBill { get; set; } = "";
-         public string CountryShip { get; set; } = "";
+
+        [Required(ErrorMessage = "The country is required")]
+        [StringLength(20)]
+        public string CountryShip { get; set; } = "";
+        [Required(ErrorMessage = "The city is required")]
+        [StringLength(20)]
         public string CityShip { get; set; } = "";
+
+        [Required(ErrorMessage = "The zip code is required")]
+        [StringLength(6)]
         public string ZipCodeShip { get; set; } = "";
-         public string StreetShip { get; set; } = "";
+
+        [Required(ErrorMessage = "The street is required")]
+        [StringLength(20)]
+        public string StreetShip { get; set; } = "";
+        [Required(ErrorMessage = "The number is required")]
+        [StringLength(5)]
         public string NumberShip { get; set; } = "";
 
         public string successMessage = "";
         public string errorMessage = "";
-
-        public bool IsValid()
-        {
-            return true;
-        }
-
-        public void Clear()
-        {
-            
-        }
-        public void OnGet()
-        {
-        }
-
-        //public void OnPost()
-        //{
-        //    if (!ModelState.)
-        //    {
-        //        errorMessage = "Data validation failed";
-        //        return;
-        //    }
-        //    successMessage = "Your checkout form has been received correctly.";
-
-        //    FirstName = "";
-        //    LastName = "";
-        //    PhoneNumber = "";
-        //    CountryBill = "";
-        //    CityBill = "";
-        //    ZipCodeBill = "";
-        //    StreetBill = "";
-        //    NumberBill = "";
-        //    CountryShip = "";
-        //    CityShip = "";
-        //    ZipCodeShip = "";
-        //    StreetShip = "";
-        //    NumberShip = "";
-
-        //    Codecool.CodecoolShop.Models.CheckoutModel.Clear();
-
-        //}
 
     }
 }
