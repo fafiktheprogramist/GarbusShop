@@ -7,55 +7,64 @@ namespace Codecool.CodecoolShop.Models
 {
     public class CheckoutModel : BaseModel
     {
-        [BindProperty]
         [Required(ErrorMessage = "The first name is required")]
         public string FirstName { get; set; } = "";
-        [BindProperty] public string LastName { get; set; } = "";
-        [BindProperty] public string Email { get; set; } = "";
-        [BindProperty] public string PhoneNumber { get; set; } = "";
-        [BindProperty] public string CountryBill { get; set; } = "";
-        [BindProperty] public string CityBill { get; set; } = "";
-        [BindProperty] public string ZipCodeBill { get; set; } = "";
-        [BindProperty] public string StreetBill { get; set; } = "";
-        [BindProperty] public string NumberBill { get; set; } = "";
-        [BindProperty] public string CountryShip { get; set; } = "";
-        [BindProperty] public string CityShip { get; set; } = "";
-        [BindProperty] public string ZipCodeShip { get; set; } = "";
-        [BindProperty] public string StreetShip { get; set; } = "";
-        [BindProperty] public string NumberShip { get; set; } = "";
+         public string LastName { get; set; } = "";
+         public string Email { get; set; } = "";
+         public string PhoneNumber { get; set; } = "";
+         public string CountryBill { get; set; } = "";
+         public string CityBill { get; set; } = "";
+         public string ZipCodeBill { get; set; } = "";
+        public string StreetBill { get; set; } = "";
+        public string NumberBill { get; set; } = "";
+         public string CountryShip { get; set; } = "";
+        public string CityShip { get; set; } = "";
+        public string ZipCodeShip { get; set; } = "";
+         public string StreetShip { get; set; } = "";
+        public string NumberShip { get; set; } = "";
 
         public string successMessage = "";
         public string errorMessage = "";
+
+        public bool IsValid()
+        {
+            return true;
+        }
+
+        public void Clear()
+        {
+            
+        }
         public void OnGet()
         {
         }
 
-        public void OnPost()
-        {
-            if (!Codecool.CodecoolShop.Models.CheckoutModel.IsVali)
-            {
-                errorMessage = "Data validation failed";
-                return;
-            }
-            successMessage = "Your checkout form has been received correctly.";
+        //public void OnPost()
+        //{
+        //    if (!ModelState.)
+        //    {
+        //        errorMessage = "Data validation failed";
+        //        return;
+        //    }
+        //    successMessage = "Your checkout form has been received correctly.";
 
-            FirstName = "";
-            LastName = "";
-            PhoneNumber = "";
-            CountryBill = "";
-            CityBill = "";
-            ZipCodeBill = "";
-            StreetBill = "";
-            NumberBill = "";
-            CountryShip = "";
-            CityShip = "";
-            ZipCodeShip = "";
-            StreetShip = "";
-            NumberShip = "";
+        //    FirstName = "";
+        //    LastName = "";
+        //    PhoneNumber = "";
+        //    CountryBill = "";
+        //    CityBill = "";
+        //    ZipCodeBill = "";
+        //    StreetBill = "";
+        //    NumberBill = "";
+        //    CountryShip = "";
+        //    CityShip = "";
+        //    ZipCodeShip = "";
+        //    StreetShip = "";
+        //    NumberShip = "";
 
-            ModelState.Clear();
+        //    Codecool.CodecoolShop.Models.CheckoutModel.Clear();
 
-        }
+        //}
 
     }
 }

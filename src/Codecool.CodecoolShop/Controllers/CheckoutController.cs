@@ -10,12 +10,13 @@ using System.Linq;
 
 namespace Codecool.CodecoolShop.Controllers
 {
-    [Route("checkout")]
+    // [Route("checkout")]
     public class CheckoutController : Controller
     {
         public ProductService ProductService { get; set; }
 
-        [Route("checkout")]
+        
+        // [Route("checkout")]
         public IActionResult Checkout()
         {
             return View();

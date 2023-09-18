@@ -12,16 +12,16 @@ namespace Codecool.CodecoolShop.Controllers
 {
     
 
-    [Route("cart")]
+    // [Route("cart")]
     public class CartController : Controller
     {
         public ProductService ProductService { get; set; }
 
-        [Route("cart")]
+        // [Route("cart")]
         public IActionResult Cart()
         {
             List<Item> cart = SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
-            if (ViewBag.cart != null)
+            if (cart != null)
             {
                 ViewBag.cart = cart;
                 ViewBag.total = cart.Sum(item => item.Product.DefaultPrice * item.Quantity);
@@ -29,7 +29,7 @@ namespace Codecool.CodecoolShop.Controllers
             return View();
         }
 
-        [Route("buy/{id}")]
+        // [Route("buy/{id}")]
         public IActionResult Buy(string id)
         {
             
@@ -61,7 +61,7 @@ namespace Codecool.CodecoolShop.Controllers
             return RedirectToAction("Cart");
         }
 
-        [Route("remove/{id}")]
+        // [Route("remove/{id}")]
         public IActionResult Remove(string id)
         {
             List<Item> cart = SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
@@ -71,7 +71,7 @@ namespace Codecool.CodecoolShop.Controllers
             return RedirectToAction("Index");
         }
 
-        [Route("substract/{id}")]
+        // [Route("substract/{id}")]
         public IActionResult Substract(string id)
         {
             List<Item> cart = SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
