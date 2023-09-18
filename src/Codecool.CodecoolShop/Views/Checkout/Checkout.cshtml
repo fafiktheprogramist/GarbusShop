@@ -1,38 +1,55 @@
-﻿@{
+﻿@page
+@model Codecool.CodecoolShop.Models.CheckoutModel
+
+@{
     ViewData["Title"] = "Checkout";
 }
+
 
 
 <div class="row">
     <div class="col-lg-9" mx-auto rounded border p-3>
         <h2 class="text-center mb-5">Checkout Form</h2>
 
+        @if (Codecool.CodecoolShop.Models.CheckoutModel.errorMessage.Length > 0)
+        {
+            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                <strong>@Codecool.CodecoolShop.Models.CheckoutModel.errorMessage</strong>
+                <button type='button' class='button-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+
+        }
+
         <form method="post">    
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">First Name:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="firstname"/>
+                    <input class="form-control" asp-for="FirstName"/>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Last Name:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="lastname" />
+                    <input class="form-control" asp-for="LastName" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Email:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="email" />
+                    <input class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Phone Number:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="phonenumber" />
+                    <input class="form-control" asp-for="PhoneNumber" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                 </div>
             </div>
             
@@ -41,35 +58,40 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Country:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="countrybill" />
+                    <input class="form-control" asp-for="CountryBill" />
+                    <span asp-validation-for="CountryBill" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">City:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="citybill" />
+                    <input class="form-control" asp-for="CityBill" />
+                    <span asp-validation-for="CityBill" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Zipcode</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="zipcodebill" />
+                    <input class="form-control" asp-for="ZipCodeBill" />
+                    <span asp-validation-for="ZipCodeBill" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Street:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="streetbill" />
+                    <input class="form-control" asp-for="StreetBill" />
+                    <span asp-validation-for="StreetBill" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Number:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="numberbill" />
+                    <input class="form-control" asp-for="NumberBill" />
+                    <span asp-validation-for="NumberBill" class="text-danger"></span>
                 </div>
             </div>
 
@@ -78,35 +100,40 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Country:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="countryship" />
+                    <input class="form-control" asp-for="CountryShip" />
+                    <span asp-validation-for="CountryShip" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">City:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="cityship" />
+                    <input class="form-control" asp-for="CityShip" />
+                    <span asp-validation-for="CityShip" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Zipcode</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="zipcodeship" />
+                    <input class="form-control" asp-for="ZipCodeShip" />
+                    <span asp-validation-for="ZipCodeShip" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Street:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="streetship" />
+                    <input class="form-control" asp-for="StreetShip" />
+                    <span asp-validation-for="StreetShip" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Number:</label>
                 <div class="col-sm-8">
-                    <input class="form-control" name="numbership" />
+                    <input class="form-control" asp-for="NumberShip" />
+                    <span asp-validation-for="NumberShip" class="text-danger"></span>
                 </div>
             </div>
             
