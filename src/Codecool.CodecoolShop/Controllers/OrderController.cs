@@ -14,17 +14,25 @@ namespace Codecool.CodecoolShop.Controllers
     public class OrderController : Controller
     {
         //[HttpGet]
+        [HttpPost]
         public IActionResult Order(int id, string firstname, string lastname, string email, string phonenumber,
             string countrybill, string citybill, string zipcodebill, string streetbill, string numberbill,
             string countryship, string cityship, string zipcodeship, string streetship, string numbership)
         {
+            
+
+
             List<Item> cart = SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
             if (cart != null)
             {
                 ViewBag.cart = cart;
                 ViewBag.total = cart.Sum(item => item.Product.DefaultPrice * item.Quantity);
             }
-            return View();
+
+            OrderModel orderDetails = new OrderModel(id, firstname, lastname, email, phonenumber,
+            countrybill, citybill, zipcodebill, streetbill, numberbill,
+            countryship, cityship, zipcodeship, streetship, numbership);
+            return View(orderDetails);
         }
 
         // [httppost]

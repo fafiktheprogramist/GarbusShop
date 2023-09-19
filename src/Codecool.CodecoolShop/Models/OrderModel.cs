@@ -5,12 +5,12 @@ namespace Codecool.CodecoolShop.Models
     public class OrderModel
     {
         private int Id { get; set; }
-        private string FirstName { get; set; }
-        private string LastName { get; set; }
-        private string Email {  get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
         private string PhoneNumber { get; set; }
         private string CountryBill { get; set; }
-        private string CityBill { get; set; }    
+        private string CityBill { get; set; }
         private string ZipCodeBill { get; set; }
         private string StreetBill { get; set; }
         private string NumberBill { get; set; }
@@ -19,8 +19,8 @@ namespace Codecool.CodecoolShop.Models
         private string ZipCodeShip { get; set; }
         private string StreetShip { get; set; }
         private string NumberShip { get; set; }
-        public OrderModel(int id, string firstName, string lastName, string email, string phoneNumber, 
-            string countryBill, string cityBill, string zipCodeBill, string streetBill, string numberBill, 
+        public OrderModel(int id, string firstName, string lastName, string email, string phoneNumber,
+            string countryBill, string cityBill, string zipCodeBill, string streetBill, string numberBill,
             string countryShip, string cityShip, string zipCodeShip, string streetShip, string numberShip)
         {
             Id = id;
@@ -38,10 +38,6 @@ namespace Codecool.CodecoolShop.Models
             ZipCodeShip = zipCodeShip;
             StreetShip = streetShip;
             NumberShip = numberShip;
-        }
-
-        public OrderModel()
-        {
         }
     }
 }
