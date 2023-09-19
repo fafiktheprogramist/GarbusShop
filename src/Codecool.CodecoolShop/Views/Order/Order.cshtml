@@ -4,3 +4,39 @@
     ViewData["Title"] = "Order";
 }
 
+@if (ViewBag.cart != null && ViewBag.cart.Count > 0)
+{
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Photo</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var item in ViewBag.cart)
+        {
+            <tr>
+                <td>@item.Product.Id</td>
+                <td>@item.Product.Name</td>
+                <td><img src="../img/@(item.Product.Name).jpg" width="60" /></td>
+                <td>@item.Product.DefaultPrice</td>
+                <td>@item.Quantity</td>
+                <td>@(item.Product.DefaultPrice * item.Quantity)</td>
+            </tr>
+        }
+        <tr>
+            <td align="right" colspan="6">Sum</td>
+            <td>
+                @ViewBag.total
+            </td>
+        </tr>
+    </table>
+}
+else
+{
+    <p>
+        Your cart is empty.
+    </p>
+}

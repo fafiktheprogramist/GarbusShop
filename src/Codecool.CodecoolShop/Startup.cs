@@ -185,6 +185,4 @@ namespace Codecool.CodecoolShop
 
 }
 
-}
-    }
 

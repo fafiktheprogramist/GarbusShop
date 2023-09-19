@@ -2,6 +2,7 @@
 using Codecool.CodecoolShop.Helpers;
 using Codecool.CodecoolShop.Models;
 using Codecool.CodecoolShop.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,20 +13,28 @@ namespace Codecool.CodecoolShop.Controllers
 {
     public class OrderController : Controller
     {
-        [HttpGet]
-        public IActionResult OrderConfirmation()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult OrderConfirmation(int id, string firstName, string lastName, string email, string phoneNumber,
-            string countryBill, string cityBill, string zipCodeBill, string streetBill, string numberBill,
-            string countryShip, string cityShip, string zipCodeShip, string streetShip, string numberShip)
+        //[HttpGet]
+        public IActionResult Order(int id, string firstname, string lastname, string email, string phonenumber,
+            string countrybill, string citybill, string zipcodebill, string streetbill, string numberbill,
+            string countryship, string cityship, string zipcodeship, string streetship, string numbership)
         {
             List<Item> cart = SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
-
+            if (cart != null)
+            {
+                ViewBag.cart = cart;
+                ViewBag.total = cart.Sum(item => item.Product.DefaultPrice * item.Quantity);
+            }
             return View();
         }
+
+        // [httppost]
+        //public IActionresult Order(int id, string firstname, string lastname, string email, string phonenumber,
+        //    string countrybill, string citybill, string zipcodebill, string streetbill, string numberbill,
+        //    string countryship, string cityship, string zipcodeship, string streetship, string numbership)
+        //{
+        //    list<item> cart = sessionhelper.getobjectfromjson<list<item>>(httpcontext.session, "cart");
+
+        //    return view();
+        //}
     }
 }
