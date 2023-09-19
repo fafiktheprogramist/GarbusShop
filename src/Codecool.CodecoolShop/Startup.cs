@@ -116,8 +116,8 @@ namespace Codecool.CodecoolShop
             Supplier bicycle = new Supplier { Name = "Bicycle", Description = "Sweden producent of bicycle racks" };
             supplierDataStore.Add(bicycle);
 
-            Supplier tull = new Supplier { Name = "Tull", Description = "German producent of trunks" };
-            supplierDataStore.Add(tull);
+            Supplier thule = new Supplier { Name = "Thule", Description = "German producent of trunks" };
+            supplierDataStore.Add(thule);
 
             Supplier univesal = new Supplier { Name = "Univesal Trunk", Description = "Polish producent of trunks" };
             supplierDataStore.Add(univesal);
@@ -128,7 +128,7 @@ namespace Codecool.CodecoolShop
             ProductCategory tires = new ProductCategory { Name = "Tires", Department = "Tires", Description = "Tires are ones of the most important part of your car for safety and efficiency reasons." };
             productCategoryDataStore.Add(tires);
 
-            ProductCategory trunks = new ProductCategory { Name = "Trunks", Department = "Luggage", Description = "Things to carry your luggage." };
+            ProductCategory trunks = new ProductCategory { Name = "Trunks", Department = "Trunks", Description = "Things to carry your luggage." };
             productCategoryDataStore.Add(trunks);
 
             ProductCategory accessories = new ProductCategory { Name = "Accesories", Department = "Accessories", Description = "Various car accessories." };
@@ -173,11 +173,12 @@ namespace Codecool.CodecoolShop
             productDataStore.Add(new Product { Name = "Ronal R46 Jetblack", DefaultPrice = 465.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
             productDataStore.Add(new Product { Name = "Ronal R54 Jetblack", DefaultPrice = 479.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
             productDataStore.Add(new Product { Name = "Ronal R56", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
+            productDataStore.Add(new Product { Name = "bicycle rack", DefaultPrice = 2419.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = bicycle });
+            productDataStore.Add(new Product { Name = "tull", DefaultPrice = 1350.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = thule });
+            productDataStore.Add(new Product { Name = "universal trunk", DefaultPrice = 3560.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = univesal });
             productDataStore.Add(new Product { Name = "nosuprise", DefaultPrice = 129.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = accessories, Supplier = help });
             productDataStore.Add(new Product { Name = "triangle", DefaultPrice = 19.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = accessories, Supplier = triangle });
-            productDataStore.Add(new Product { Name = "bicycle rack", DefaultPrice = 2419.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = bicycle });
-            productDataStore.Add(new Product { Name = "tull", DefaultPrice = 1350.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = tull });
-            productDataStore.Add(new Product { Name = "universal trunk", DefaultPrice = 3560.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = univesal });
+
         }
 
     }
