@@ -13,15 +13,12 @@ namespace Codecool.CodecoolShop.Controllers
 {
     public class OrderController : Controller
     {
-        //[HttpGet]
+        
         [HttpPost]
         public IActionResult Order(int id, string firstname, string lastname, string email, string phonenumber,
             string countrybill, string citybill, string zipcodebill, string streetbill, string numberbill,
             string countryship, string cityship, string zipcodeship, string streetship, string numbership)
         {
-            
-
-
             List<Item> cart = SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
             if (cart != null)
             {
@@ -34,15 +31,5 @@ namespace Codecool.CodecoolShop.Controllers
             countryship, cityship, zipcodeship, streetship, numbership);
             return View(orderDetails);
         }
-
-        // [httppost]
-        //public IActionresult Order(int id, string firstname, string lastname, string email, string phonenumber,
-        //    string countrybill, string citybill, string zipcodebill, string streetbill, string numberbill,
-        //    string countryship, string cityship, string zipcodeship, string streetship, string numbership)
-        //{
-        //    list<item> cart = sessionhelper.getobjectfromjson<list<item>>(httpcontext.session, "cart");
-
-        //    return view();
-        //}
     }
 }
