@@ -41,9 +41,16 @@ else
     </p>
 }
 <div>
-    <h3>Order Details:</h3>
+    <h3>Shipping Details</h3>
     <p>First Name: @Model.FirstName</p>
     <p>Last Name: @Model.LastName</p>
+    <p>Shipping Address:</p>
+    <p>@Model.CountryShip</p>
+    <p>@Model.CityShip</p>
+    <p>@Model.StreetShip</p>
+
+    <h3>Contact Details:</h3>
     <p>Email: @Model.Email</p>
+    <p>Phone: @Model.PhoneNumber</p>
     <!-- Dodaj pozostałe pola z modelu OrderModel -->
 </div>
