@@ -76,10 +76,10 @@ namespace Codecool.CodecoolShop
             Supplier dotz = new Supplier { Name = "Dotz", Description = "Producent of rims" };
             supplierDataStore.Add(dotz);
 
-            Supplier autec = new Supplier { Name = "Autec", Description = "Rims" };
+            Supplier autec = new Supplier { Name = "Autec", Description = "Producent of rims" };
             supplierDataStore.Add(autec);
 
-            Supplier alutec = new Supplier { Name = "Alutec", Description = "Rims" };
+            Supplier alutec = new Supplier { Name = "Alutec", Description = "Producent of rims" };
             supplierDataStore.Add(alutec);
 
             Supplier pirelli = new Supplier { Name = "Pirelli", Description = "Producent of tires" };
@@ -97,16 +97,25 @@ namespace Codecool.CodecoolShop
             Supplier debica = new Supplier { Name = "Dêbica", Description = "Polish producent of tires" };
             supplierDataStore.Add(debica);
 
-            ProductCategory rims = new ProductCategory { Name = "Rims", Department = "Wheel", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            Supplier dunlop = new Supplier { Name = "Dunlop", Description = "Producent of expensive tires" };
+            supplierDataStore.Add(dunlop);
+
+            Supplier kormoran = new Supplier { Name = "Kormoran", Description = "Polish producent of good tires" };
+            supplierDataStore.Add(kormoran);
+
+            Supplier laufenn = new Supplier { Name = "Laufenn", Description = "German producent of tires" };
+            supplierDataStore.Add(laufenn);
+
+            ProductCategory rims = new ProductCategory { Name = "Rims", Department = "Rims", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
             productCategoryDataStore.Add(rims);
 
-            ProductCategory tires = new ProductCategory { Name = "Tires", Department = "Tire", Description = "Tires are ones of the most important part of your car for safety and efficiency reasons." };
+            ProductCategory tires = new ProductCategory { Name = "Tires", Department = "Tires", Description = "Tires are ones of the most important part of your car for safety and efficiency reasons." };
             productCategoryDataStore.Add(tires);
 
-            ProductCategory trunk = new ProductCategory { Name = "Trunk", Department = "Luggage", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            ProductCategory trunk = new ProductCategory { Name = "Trunk", Department = "Luggage", Description = "Things to carry your luggage." };
             productCategoryDataStore.Add(trunk);
 
-            ProductCategory accessories = new ProductCategory { Name = "Trunk", Department = "Accessories", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            ProductCategory accessories = new ProductCategory { Name = "Accesories", Department = "Accessories", Description = "Various car accessories." };
             productCategoryDataStore.Add(accessories);
 
             productDataStore.Add(new Product { Name = "Alutec Grip Polar", DefaultPrice = 399.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = alutec });
@@ -114,6 +123,13 @@ namespace Codecool.CodecoolShop
             productDataStore.Add(new Product { Name = "Autec Skandic Dark", DefaultPrice = 379.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = autec });
             productDataStore.Add(new Product { Name = "Autec Skandic", DefaultPrice = 369.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = autec });
             productDataStore.Add(new Product { Name = "Autec Xenos Dark", DefaultPrice = 499.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = autec });
+            productDataStore.Add(new Product { Name = "Bridgestone Ecopia", DefaultPrice = 500.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = bridgestone });
+            productDataStore.Add(new Product { Name = "Bridgestone Er300", DefaultPrice = 600.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = bridgestone });
+            productDataStore.Add(new Product { Name = "Bridgestone Turanza T005", DefaultPrice = 700.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = bridgestone });
+            productDataStore.Add(new Product { Name = "Bridgestone Turanza T006", DefaultPrice = 750.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = bridgestone });
+            productDataStore.Add(new Product { Name = "Bridgestone Turanza", DefaultPrice = 650.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = bridgestone });
+            productDataStore.Add(new Product { Name = "Debica Presto Hp", DefaultPrice = 250.0m, Currency = "USD", Description = "Fantastic price for a low quality product. Cheap polish tire.", ProductCategory = tires, Supplier = debica });
+            productDataStore.Add(new Product { Name = "Debica Presto hp 2", DefaultPrice = 250.0m, Currency = "USD", Description = "Fantastic price for a low quality product. Cheap polish tire.", ProductCategory = tires, Supplier = debica });
             productDataStore.Add(new Product { Name = "Dezent Ta Dark", DefaultPrice = 699.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dezent });
             productDataStore.Add(new Product { Name = "Dezent Ty Graphite", DefaultPrice = 589.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dezent });
             productDataStore.Add(new Product { Name = "Dezent Ty", DefaultPrice = 589.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dezent });
@@ -124,6 +140,14 @@ namespace Codecool.CodecoolShop
             productDataStore.Add(new Product { Name = "Dotz Modular", DefaultPrice = 395.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dotz });
             productDataStore.Add(new Product { Name = "Dotz Pharao Dark", DefaultPrice = 499.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dotz });
             productDataStore.Add(new Product { Name = "Dotz Pharao", DefaultPrice = 499.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = dotz });
+            productDataStore.Add(new Product { Name = "dunlop-sp-sport-bluresponse", DefaultPrice = 900.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = dunlop });
+            productDataStore.Add(new Product { Name = "dunlop-sp-sport-maxx-tt", DefaultPrice = 800.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = dunlop });
+            productDataStore.Add(new Product { Name = "kormoran-road-performance", DefaultPrice = 300.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = kormoran });
+            productDataStore.Add(new Product { Name = "laufenn-s-fit", DefaultPrice = 900.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = laufenn });
+            productDataStore.Add(new Product { Name = "laufenn-s-fit-eq", DefaultPrice = 950.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great performance tire.", ProductCategory = tires, Supplier = laufenn });
+            productDataStore.Add(new Product { Name = "pirelli-p7-cinturato", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = tires, Supplier = pirelli });
+            productDataStore.Add(new Product { Name = "pirelli-p1-cinturato-verde", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = tires, Supplier = pirelli });
+            productDataStore.Add(new Product { Name = "pirelli-p7-cinturato-4548", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = tires, Supplier = pirelli });
             productDataStore.Add(new Product { Name = "Rial Astorga", DefaultPrice = 650.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = rial });
             productDataStore.Add(new Product { Name = "Rial Kodiak Graphite", DefaultPrice = 439.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = rial });
             productDataStore.Add(new Product { Name = "Rial Kodiak", DefaultPrice = 439.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = rial });
@@ -133,8 +157,8 @@ namespace Codecool.CodecoolShop
             productDataStore.Add(new Product { Name = "Ronal R46 Jetblack", DefaultPrice = 465.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
             productDataStore.Add(new Product { Name = "Ronal R54 Jetblack", DefaultPrice = 479.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
             productDataStore.Add(new Product { Name = "Ronal R56", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
-            productDataStore.Add(new Product { Name = "Pirelli P7 Cinturato", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = tires, Supplier = pirelli });
-            productDataStore.Add(new Product { Name = "Bridgestone Ecopia", DefaultPrice = 500.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = tires, Supplier = bridgestone });
+            
+            
         }
 
     }
