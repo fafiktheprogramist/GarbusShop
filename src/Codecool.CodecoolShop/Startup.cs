@@ -91,10 +91,16 @@ namespace Codecool.CodecoolShop
             Supplier rial = new Supplier { Name = "Rial", Description = "Producent of rims" };
             supplierDataStore.Add(rial);
 
+            Supplier bridgestone = new Supplier { Name = "Bridgestone", Description = "Producent of tires" };
+            supplierDataStore.Add(bridgestone);
+
+            Supplier debica = new Supplier { Name = "Dêbica", Description = "Polish producent of tires" };
+            supplierDataStore.Add(debica);
+
             ProductCategory rims = new ProductCategory { Name = "Rims", Department = "Wheel", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
             productCategoryDataStore.Add(rims);
 
-            ProductCategory tires = new ProductCategory { Name = "Tires", Department = "Tire", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            ProductCategory tires = new ProductCategory { Name = "Tires", Department = "Tire", Description = "Tires are ones of the most important part of your car for safety and efficiency reasons." };
             productCategoryDataStore.Add(tires);
 
             ProductCategory trunk = new ProductCategory { Name = "Trunk", Department = "Luggage", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
@@ -127,9 +133,8 @@ namespace Codecool.CodecoolShop
             productDataStore.Add(new Product { Name = "Ronal R46 Jetblack", DefaultPrice = 465.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
             productDataStore.Add(new Product { Name = "Ronal R54 Jetblack", DefaultPrice = 479.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
             productDataStore.Add(new Product { Name = "Ronal R56", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
-
             productDataStore.Add(new Product { Name = "Pirelli P7 Cinturato", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = tires, Supplier = pirelli });
-
+            productDataStore.Add(new Product { Name = "Bridgestone Ecopia", DefaultPrice = 500.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = tires, Supplier = bridgestone });
         }
 
     }
