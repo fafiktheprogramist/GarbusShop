@@ -12,28 +12,35 @@
 <div class="container">
     @foreach (var element in Model)
      {
-        <div class="col-lg-3 item" style="display: inline-block; max-width: 350px; margin-bottom: 10px;">
+        <div class="col-lg-2" style="display: inline-block; max-width: 350px; margin-bottom: 10px;">
             <div class="card">
                 <img src="../img/@(element.Name).jpg" style="max-height: 159px; width: auto; align-self: center; padding-top: 10px">
 
                 <div class="card-body">
-                    <h5 class="card-title">@element.Name</h5>
-                    <p class="card-text">@element.Description</p>
-                    <p class="card-text">
+                    <h5 class="card-title" style="margin-bottom: 0;">@element.Name</h5>
+                    <p class="card-text" style="font-size: 15px; color: gray;">
                         Category:
-                        <a asp-area="" asp-controller="Product" asp-action="Categories" asp-route-category="@element.ProductCategory.Id">
+                        <a asp-area="" asp-controller="Product" asp-action="Categories" asp-route-category="@element.ProductCategory.Id"
+                           style="color: gray; text-decoration: underline; font-weight: 600;">
                             @element.ProductCategory.Department
                         </a>
-                    </p>
-                    <p class="card-text">
+                        |
                         Supplier:
-                        <a asp-area="" asp-controller="Product" asp-action="Suppliers" asp-route-supplier="@element.Supplier.Id">
+                        <a asp-area="" asp-controller="Product" asp-action="Suppliers" asp-route-supplier="@element.Supplier.Id"
+                           style="color: gray; text-decoration: underline; font-weight: 600;">
                             @element.Supplier.Name
                         </a>
                     </p>
+                    <hr />
+                    <p class="card-text">@element.Description</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <p class="card-text text-center" style="margin: 0;"><strong>Price: @element.DefaultPrice.ToString("C2")</strong></p>
-                        <a type="button" class="btn btn-primary" asp-area="" asp-controller="Cart" asp-action="buy" asp-route-id="@element.Id" style="margin-left: auto;">Add To Cart</a>
+                        <a type="button" class="btn btn-primary" asp-area="" asp-controller="Cart" asp-action="buy" asp-route-id="@element.Id" style="margin-left: auto; display: flex; justify-content: space-between; align-items: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" data-name="Layer 1" viewBox="0 0 24 24" id="cart">
+                                <path d="M8.5,19A1.5,1.5,0,1,0,10,20.5,1.5,1.5,0,0,0,8.5,19ZM19,16H7a1,1,0,0,1,0-2h8.49121A3.0132,3.0132,0,0,0,18.376,11.82422L19.96143,6.2749A1.00009,1.00009,0,0,0,19,5H6.73907A3.00666,3.00666,0,0,0,3.92139,3H3A1,1,0,0,0,3,5h.92139a1.00459,1.00459,0,0,1,.96142.7251l.15552.54474.00024.00506L6.6792,12.01709A3.00006,3.00006,0,0,0,7,18H19a1,1,0,0,0,0-2ZM17.67432,7l-1.2212,4.27441A1.00458,1.00458,0,0,1,15.49121,12H8.75439l-.25494-.89221L7.32642,7ZM16.5,19A1.5,1.5,0,1,0,18,20.5,1.5,1.5,0,0,0,16.5,19Z" fill="white"></path>
+                            </svg>
+                            Add To Cart
+                        </a>
                     </div>
                 </div>
             </div>
