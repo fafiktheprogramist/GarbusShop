@@ -29,7 +29,8 @@ namespace Codecool.CodecoolShop.Controllers
             OrderModel orderDetails = new OrderModel(id, firstname, lastname, email, phonenumber,
             countrybill, citybill, zipcodebill, streetbill, numberbill,
             countryship, cityship, zipcodeship, streetship, numbership);
-            return View(orderDetails);
+            ViewBag.OrderDetails = orderDetails.GetOrderDetails();
+            return View();
         }
     }
 }

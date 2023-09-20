@@ -41,16 +41,31 @@ else
     </p>
 }
 <div>
+
+
     <h3>Shipping Details</h3>
-    <p>First Name: @Model.FirstName</p>
-    <p>Last Name: @Model.LastName</p>
-    <p>Shipping Address:</p>
-    <p>@Model.CountryShip</p>
-    <p>@Model.CityShip</p>
-    <p>@Model.StreetShip</p>
+    <p>First Name: @ViewBag.OrderDetails["FirstName"] </p>
+    <p>Last Name: @ViewBag.OrderDetails["LastName"]</p>
 
     <h3>Contact Details:</h3>
-    <p>Email: @Model.Email</p>
-    <p>Phone: @Model.PhoneNumber</p>
-    <!-- Dodaj pozostałe pola z modelu OrderModel -->
+    <p>Email: @ViewBag.OrderDetails["Email"]</p>
+    <p>Phone Number: @ViewBag.OrderDetails["PhoneNumber"]</p>
+
+
+    <h3>Shipping Address:</h3>
+    <p>@ViewBag.OrderDetails["CountryShip"]</p>
+    <p>@ViewBag.OrderDetails["CityShip"]p</p>
+    <p>@ViewBag.OrderDetails["ZipCodeShip"]</p>
+    <p>@ViewBag.OrderDetails["StreetShip"]</p>
+    <p>@ViewBag.OrderDetails["NumberShip"]</p>
+
+    <h3>Billing Address: </h3>
+    <p>@ViewBag.OrderDetails["CountryBill"]</p>
+    <p>@ViewBag.OrderDetails["CityBill"]</p>
+    <p>@ViewBag.OrderDetails["ZipCodeBill"]</p>
+    <p>@ViewBag.OrderDetails["NumberBill"]</p>
+
 </div>
+<a type="button" class="btn btn-primary" style="float: bottom" asp-area="" asp-controller="Cart" asp-action="Cart">Back to cart</a>
+<a type="button" class="btn btn-secondary" style="float: bottom" asp-area="" asp-controller="Payment" asp-action="Payment">Go to payment</a>
+
