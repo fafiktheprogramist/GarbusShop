@@ -104,23 +104,14 @@ namespace Codecool.CodecoolShop
             Supplier kormoran = new Supplier { Name = "Kormoran", Description = "Polish producent of good tires" };
             supplierDataStore.Add(kormoran);
 
-            Supplier laufenn = new Supplier { Name = "Laufenn", Description = "German producent of tires" };
+            Supplier laufenn = new Supplier { Name = "Laufenn", Description = "German producent of tires." };
             supplierDataStore.Add(laufenn);
 
-            Supplier help = new Supplier { Name = "No Suprise", Description = "English producent of safety" };
-            supplierDataStore.Add(help);
+            Supplier tompar = new Supplier { Name = "tompar", Description = "Polish producent of car accessories>" };
+            supplierDataStore.Add(tompar);
 
-            Supplier triangle = new Supplier { Name = "Help", Description = "Polish producent of triangle" };
-            supplierDataStore.Add(triangle);
-
-            Supplier bicycle = new Supplier { Name = "Bicycle", Description = "Sweden producent of bicycle racks" };
-            supplierDataStore.Add(bicycle);
-
-            Supplier thule = new Supplier { Name = "Thule", Description = "German producent of trunks" };
+            Supplier thule = new Supplier { Name = "Thule", Description = "Swedish producent of trunks." };
             supplierDataStore.Add(thule);
-
-            Supplier univesal = new Supplier { Name = "Univesal Trunk", Description = "Polish producent of trunks" };
-            supplierDataStore.Add(univesal);
 
             ProductCategory rims = new ProductCategory { Name = "Rims", Department = "Rims", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
             productCategoryDataStore.Add(rims);
@@ -173,11 +164,11 @@ namespace Codecool.CodecoolShop
             productDataStore.Add(new Product { Name = "Ronal R46 Jetblack", DefaultPrice = 465.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
             productDataStore.Add(new Product { Name = "Ronal R54 Jetblack", DefaultPrice = 479.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
             productDataStore.Add(new Product { Name = "Ronal R56", DefaultPrice = 299.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategory = rims, Supplier = ronal });
-            productDataStore.Add(new Product { Name = "bicycle rack", DefaultPrice = 2419.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = bicycle });
-            productDataStore.Add(new Product { Name = "tull", DefaultPrice = 1350.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = thule });
-            productDataStore.Add(new Product { Name = "universal trunk", DefaultPrice = 3560.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = univesal });
-            productDataStore.Add(new Product { Name = "nosuprise", DefaultPrice = 129.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = accessories, Supplier = help });
-            productDataStore.Add(new Product { Name = "Emergency triangle", DefaultPrice = 19.0m, Currency = "USD", Description = "An emergency triangle to set up when neccessary.", ProductCategory = accessories, Supplier = triangle });
+            productDataStore.Add(new Product { Name = "Bicycle rack", DefaultPrice = 2419.0m, Currency = "USD", Description = "Universal bicycle rack at great price.", ProductCategory = trunks, Supplier = thule });
+            productDataStore.Add(new Product { Name = "Roof box", DefaultPrice = 1350.0m, Currency = "USD", Description = "Universal roof box.", ProductCategory = trunks, Supplier = thule });
+            productDataStore.Add(new Product { Name = "Universal trunk", DefaultPrice = 3560.0m, Currency = "USD", Description = "Universal roof rack.", ProductCategory = trunks, Supplier = tompar });
+            productDataStore.Add(new Product { Name = "Accessories set", DefaultPrice = 129.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = accessories, Supplier = tompar });
+            productDataStore.Add(new Product { Name = "Emergency triangle", DefaultPrice = 19.0m, Currency = "USD", Description = "An emergency triangle to set up when neccessary.", ProductCategory = accessories, Supplier = tompar });
 
         }
 
