@@ -2,8 +2,8 @@
 Codecool shop (sprint 1)
 
 Group project of January 2023 CodeCool course students:
-Grzegorz £abojko
-Rafa³ G³owacz
+Grzegorz Â£abojko
+Rafal Glowacz
 Beata Piekarek
 Sofiia Savchenko
 
