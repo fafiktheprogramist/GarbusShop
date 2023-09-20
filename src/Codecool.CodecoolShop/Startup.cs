@@ -177,7 +177,7 @@ namespace Codecool.CodecoolShop
             productDataStore.Add(new Product { Name = "tull", DefaultPrice = 1350.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = thule });
             productDataStore.Add(new Product { Name = "universal trunk", DefaultPrice = 3560.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = trunks, Supplier = univesal });
             productDataStore.Add(new Product { Name = "nosuprise", DefaultPrice = 129.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = accessories, Supplier = help });
-            productDataStore.Add(new Product { Name = "triangle", DefaultPrice = 19.0m, Currency = "USD", Description = "A set of first necessities so that you are never surprised.", ProductCategory = accessories, Supplier = triangle });
+            productDataStore.Add(new Product { Name = "Emergency triangle", DefaultPrice = 19.0m, Currency = "USD", Description = "An emergency triangle to set up when neccessary.", ProductCategory = accessories, Supplier = triangle });
 
         }
 
