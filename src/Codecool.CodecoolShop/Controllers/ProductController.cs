@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Codecool.CodecoolShop.Models;
 using Codecool.CodecoolShop.Services;
+//using X.PagedList;
 
 namespace Codecool.CodecoolShop.Controllers
 {
@@ -34,6 +35,16 @@ namespace Codecool.CodecoolShop.Controllers
             var products = ProductService.GetProductsForCategory(1);
             return View(products.ToList());
         }
+
+        //public IActionResult Index(int? page)
+        //{
+        //    int pageNumber = page ?? 1;
+        //    int pageSize = 12;
+
+        //    List<Product> products = (List<Product>)ProductService.GetProductsForCategory(1);
+        //    IPagedList<Product> pagedProducts = products.ToPagedList(pageNumber, pageSize);
+        //    return View(pagedProducts);
+        //}
 
         public IActionResult Categories(int category = 1)
         {
