@@ -11,3 +11,6 @@ namespace Codecool.CodecoolShop.Daos
         IEnumerable<T> GetAll();
     }
 }
+
+
+

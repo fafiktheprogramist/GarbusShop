@@ -1,0 +1,93 @@
+﻿@model Codecool.CodecoolShop.Models.Payment
+
+@{
+    ViewData["Title"] = "Payment";
+}
+
+<section style="background-color: #eee;">
+    <div class="container py-5">
+        <div class="card">
+            <div class="card-body">
+
+                    <div class="col-md-7 col-xl-5 mb-4 mb-md-0">
+                        <div class="py-4 d-flex flex-row">
+                            <h5><span class="far fa-check-square pe-2"></span><b>GaRBuS Shop</b> |</h5>
+                            <span class="ps-2">Pay</span>
+                        </div>
+                        <h4 class="text-success">Total: @ViewBag.total.ToString("C2")</h4>
+                       
+                        <p class="text-primary">
+                            <a asp-controller="Payment" asp-action="AddCard">Add payment card</a>
+                        </p>
+                    </div>
+           
+                <form method="post">
+                    <div class="d-flex flex-row pb-3">
+                        <div class="d-flex align-items-center pe-2">
+                            <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1"
+                                   value="" aria-label="..." checked />
+                        </div>
+                        <div class="rounded border d-flex w-100 p-3 align-items-center">
+
+                            <div class="row mb-3">
+                                
+                                <div class="col-sm-8">
+                                    <input class="form-control" asp-for="CardNumber" placeholder="Card number" />
+                                    <span asp-validation-for="CardNumber" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <input class="form-control" asp-for="Name" placeholder="Cardholder's name" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input id="formControlLgExpk8" class="form-control"
+                                           placeholder="MM/YYYY" />
+                                    <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input class="form-control" asp-for="Cvv" placeholder="CVV" />
+                                    <span asp-validation-for="Cvv" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <input type="button" value="Proceed to payment" class="btn btn-primary btn-block btn-lg" />
+
+
+
+                @if (ViewBag.cart != null && ViewBag.cart.Count > 0)
+                {
+                    <div class="rounded d-flex flex-column p-2" style="background-color: #f8f9fa;">
+                        <div class="p-2 me-3">
+                            <h4>Order Recap</h4>
+                        </div>
+
+                        @foreach (var item in ViewBag.cart)
+                        {
+                            <div class="border-top px-2 mx-2"></div>
+                            <div class="p-2 d-flex pt-3">
+                                <div class="col-8">@item.Product.Name</div>
+                                <div class="ms-auto">@((item.Product.DefaultPrice * item.Quantity).ToString("C2"))</div>
+                            </div>
+                        }
+                        <div class="border-top px-2 mx-2"></div>
+                        <div class="p-2 d-flex pt-3">
+                            <div class="col-8"><b>Total</b></div>
+                            <div class="ms-auto"><b class="text-success">@ViewBag.total.ToString("C2")</b></div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p>
+                        Your cart is empty.
+                    </p>
+                }
+            </div>
+                        </div>
+                    </div>
+              
+</section>
