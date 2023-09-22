@@ -49,11 +49,7 @@ namespace Codecool.CodecoolShop.Controllers
             return View();
         }
 
-        public IActionResult AddCard()
-        {
-            
-            return View();
-        }
+       
     }
 }
 
