@@ -27,7 +27,7 @@ namespace Codecool.CodecoolShop.Controllers
 
             return View();
         }
-
+        //[HttpPost]
         public IActionResult OrderConfirmation(int id, string firstname, string lastname, string email, string phonenumber,
             string countrybill, string citybill, string zipcodebill, string streetbill, string numberbill,
             string countryship, string cityship, string zipcodeship, string streetship, string numbership)
@@ -38,17 +38,20 @@ namespace Codecool.CodecoolShop.Controllers
             countryship, cityship, zipcodeship, streetship, numbership);
 
             var orderDetailsDictionary = orderDetails.GetOrderDetails();
-            string Cart = JsonConvert.SerializeObject(cart.ToArray());
-            
-            string OrderDetails = JsonConvert.SerializeObject(orderDetailsDictionary.ToArray());
+            //string Cart = JsonConvert.SerializeObject(cart.ToArray());
+
+            //string OrderDetails = JsonConvert.SerializeObject(orderDetailsDictionary.ToArray());
 
             //write string to file
-            System.IO.File.WriteAllText(@"/Users/sofia/Documents/C#/CodeCoolShopS1/src/Codecool.CodecoolShop/JSONFiles/Order.json", Cart);
-            System.IO.File.WriteAllText(@"/Users/sofia/Documents/C#/CodeCoolShopS1/src/Codecool.CodecoolShop/JSONFiles/Order.json", OrderDetails);
+            //System.IO.File.WriteAllText(@"/Users/sofia/Documents/C#/CodeCoolShopS1/src/Codecool.CodecoolShop/JSONFiles/Order.json", Cart);
+            //System.IO.File.WriteAllText(@"/Users/sofia/Documents/C#/CodeCoolShopS1/src/Codecool.CodecoolShop/JSONFiles/Order.json", OrderDetails);
+            string json1 = JsonConvert.SerializeObject(orderDetailsDictionary, Formatting.Indented);
+            //string json2 = JsonConvert.SerializeObject(orderDetailsDictionary.ToString());
+            System.IO.File.WriteAllText(@"E:\programowanie\projekty\C#\koszyk\irytujacyKoszyk.json", json1);
+            //System.IO.File.WriteAllText(@"E:\programowanie\projekty\C#\koszyk\irytujacyKoszyk.json", json2);
 
             return View();
         }
-
        
     }
 }
