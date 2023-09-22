@@ -9,18 +9,18 @@
         <div class="card">
             <div class="card-body">
 
-                    <div class="col-md-7 col-xl-5 mb-4 mb-md-0">
-                        <div class="py-4 d-flex flex-row">
-                            <h5><span class="far fa-check-square pe-2"></span><b>GaRBuS Shop</b> |</h5>
-                            <span class="ps-2">Pay</span>
-                        </div>
-                        <h4 class="text-success">Total: @ViewBag.total.ToString("C2")</h4>
-                       
-                        <p class="text-primary">
-                            <a asp-controller="Payment" asp-action="AddCard">Add payment card</a>
-                        </p>
+                <div class="col-md-7 col-xl-5 mb-4 mb-md-0">
+                    <div class="py-4 d-flex flex-row">
+                        <h5><span class="far fa-check-square pe-2"></span><b>GaRBuS Shop</b> |</h5>
+                        <span class="ps-2">Pay</span>
                     </div>
-           
+                    <h4 class="text-success">Total: @ViewBag.total.ToString("C2")</h4>
+
+                    <p class="text-primary">
+                        <a asp-controller="Payment" asp-action="AddCard">Add payment card</a>
+                    </p>
+                </div>
+
                 <form method="post">
                     <div class="d-flex flex-row pb-3">
                         <div class="d-flex align-items-center pe-2">
@@ -30,7 +30,7 @@
                         <div class="rounded border d-flex w-100 p-3 align-items-center">
 
                             <div class="row mb-3">
-                                
+
                                 <div class="col-sm-8">
                                     <input class="form-control" asp-for="CardNumber" placeholder="Card number" />
                                     <span asp-validation-for="CardNumber" class="text-danger"></span>
@@ -54,7 +54,7 @@
                     </div>
 
                 </form>
-                <input type="button" value="Proceed to payment" class="btn btn-primary btn-block btn-lg" />
+                <a type="button" value="Proceed to payment" class="btn btn-primary btn-block btn-lg" asp-controller="Payment" asp-action="OrderConfirmation">Proceed to payment</a>
 
 
 
@@ -87,7 +87,7 @@
                     </p>
                 }
             </div>
-                        </div>
-                    </div>
-              
+        </div>
+    </div>
+
 </section>

@@ -20,6 +20,8 @@ namespace Codecool.CodecoolShop.Models
         [Required(ErrorMessage = "The CVV is required")]
         [StringLength(3)]
         public string Cvv { get; set; } = "";
+
+      
     }
 }
 

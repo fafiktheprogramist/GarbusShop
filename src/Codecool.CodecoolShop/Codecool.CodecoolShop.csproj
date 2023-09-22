@@ -15,6 +15,7 @@
     <None Remove="Nowy folder2\**" />
     <None Remove="Views\Cart\" />
     <None Remove="Views\Payment\" />
+    <None Remove="JSONFiles\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,5 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Payment\" />
+    <Folder Include="JSONFiles\" />
   </ItemGroup>
 </Project>
