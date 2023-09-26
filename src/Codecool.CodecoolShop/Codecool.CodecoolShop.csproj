@@ -30,4 +30,8 @@
     <Folder Include="Views\Payment\" />
     <Folder Include="JSONFiles\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Codecool.CodecoolShop.Data\Codecool.CodecoolShop.Data.csproj" />
+    <ProjectReference Include="..\Codecool.CodecoolShop.Domain\Codecool.CodecoolShop.Domain.csproj" />
+  </ItemGroup>
 </Project>
