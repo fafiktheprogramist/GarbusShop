@@ -21,9 +21,7 @@ namespace Codecool.CodecoolShop.Controllers
     {
 
         [HttpPost]
-        public IActionResult Order(int id, string firstname, string lastname, string email, string phonenumber,
-            string countrybill, string citybill, string zipcodebill, string streetbill, string numberbill,
-            string countryship, string cityship, string zipcodeship, string streetship, string numbership)
+        public IActionResult Order(OrderModel orderDetails)
         {
             List<Item> cart = SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
             if (cart != null)
@@ -32,10 +30,10 @@ namespace Codecool.CodecoolShop.Controllers
                 ViewBag.total = cart.Sum(item => item.Product.DefaultPrice * item.Quantity);
             }
 
-            OrderModel orderDetails = new OrderModel(id, firstname, lastname, email, phonenumber,
-            countrybill, citybill, zipcodebill, streetbill, numberbill,
-            countryship, cityship, zipcodeship, streetship, numbership);
-            ViewBag.OrderDetails = orderDetails.GetOrderDetails();
+            //OrderModel orderDetails = new OrderModel(id, firstname, lastname, email, phonenumber,
+            //countrybill, citybill, zipcodebill, streetbill, numberbill,
+            //countryship, cityship, zipcodeship, streetship, numbership);
+            //ViewBag.OrderDetails = orderDetails.GetOrderDetails();
             //string json1 = JsonConvert.SerializeObject(cart.ToString());
             //string json2 = JsonConvert.SerializeObject(orderDetails.ToString());
             //System.IO.File.WriteAllText(@"E:\programowanie\projekty\C#\koszyk\irytujacyKoszyk.json", json1);
