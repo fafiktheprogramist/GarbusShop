@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Codecool.CodecoolShop.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace Codecool.CodecoolShop.Data
     public class ProductsContext : DbContext
     {
         private const string ConnectionString = "Data Source=DESKTOP-FLUTGQS;Database=Products;Integrated Security=true";
+        
+        public DbSet<Products> Products { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(ConnectionString);
