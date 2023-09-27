@@ -13,6 +13,7 @@ namespace Codecool.CodecoolShop
     {
         public static void Main(string[] args)
         {
+            var productContext = new ProductsContext();
             CreateHostBuilder(args).Build().Run();
         }
 
