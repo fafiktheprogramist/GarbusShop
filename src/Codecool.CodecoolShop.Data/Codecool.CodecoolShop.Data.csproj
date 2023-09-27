@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Codecool.CodecoolShop.Domain\Codecool.CodecoolShop.Domain.csproj" />
+    <ProjectReference Include="..\Codecool.CodecoolShop\Codecool.CodecoolShop.csproj" />
   </ItemGroup>
 
 </Project>
