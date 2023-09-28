@@ -11,12 +11,14 @@ namespace Codecool.CodecoolShop.Data
 {
     public class ProductsContext : DbContext
     {
-        private const string ConnectionString = "Data Source=DESKTOP-FLUTGQS\\SQLEXPRESS;Database=Products;Integrated Security=true;TrustServerCertificate=true";
-        
+        public ProductsContext(DbContextOptions<ProductsContext> options) : base(options)
+        {
+        }
+
         public DbSet<Products> Products { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConnectionString);
+            
 
             base.OnConfiguring(optionsBuilder);
         }

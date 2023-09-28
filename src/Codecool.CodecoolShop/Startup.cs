@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Codecool.CodecoolShop.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Codecool.CodecoolShop
 {
@@ -27,8 +29,11 @@ namespace Codecool.CodecoolShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ProductsContext>(options =>
+    options.UseSqlServer(Configuration.GetConnectionString("Shop")));
             services.AddControllersWithViews();
             services.AddSession();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

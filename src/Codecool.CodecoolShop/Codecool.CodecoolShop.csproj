@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="X.PagedList.Mvc" Version="8.0.7" />
   </ItemGroup>
@@ -29,5 +33,9 @@
   <ItemGroup>
     <Folder Include="Views\Payment\" />
     <Folder Include="JSONFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Codecool.CodecoolShop.Data\Codecool.CodecoolShop.Data.csproj" />
+    <ProjectReference Include="..\Codecool.CodecoolShop.Domain\Codecool.CodecoolShop.Domain.csproj" />
   </ItemGroup>
 </Project>

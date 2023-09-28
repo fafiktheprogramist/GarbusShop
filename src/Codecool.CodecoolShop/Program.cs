@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Codecool.CodecoolShop.Data;
+using Codecool.CodecoolShop.Domain;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -15,13 +16,7 @@ namespace Codecool.CodecoolShop
     {
         public static void Main(string[] args)
         {
-            var productsContext = new ProductsContext();
-            var products = productsContext.Products;
-
-            foreach (var product in products)
-            {
-
-            }
+            
 
 
             CreateHostBuilder(args).Build().Run();
