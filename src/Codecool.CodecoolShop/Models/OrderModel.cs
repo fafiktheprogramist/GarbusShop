@@ -32,7 +32,10 @@ namespace Codecool.CodecoolShop.Models
                 { "NumberShip", numberShip }
             };
         }
-
+        public OrderModel()
+        {
+            
+        }
         public Dictionary<string, string> GetOrderDetails()
         {
             return OrderDetails;

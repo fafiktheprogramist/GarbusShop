@@ -19,7 +19,8 @@ namespace Codecool.CodecoolShop.Controllers
         // [Route("checkout")]
         public IActionResult Checkout()
         {
-            return View();
+            var checkoutModel = new CheckoutModel();
+            return View(checkoutModel);
         }
 
     }
