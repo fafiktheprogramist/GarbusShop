@@ -31,7 +31,7 @@ namespace Codecool.CodecoolShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ShopContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("Shop")));
+            options.UseSqlServer(Configuration.GetConnectionString("Shop")));
             services.AddScoped<IProductCategoryDao, ProductCategoryDaoEF>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddSession();

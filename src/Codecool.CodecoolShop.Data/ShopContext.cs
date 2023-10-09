@@ -23,8 +23,10 @@ namespace Codecool.CodecoolShop.Data
         {
             var ronal = new Supplier { Id = 1, Name = "Ronal", Description = "Producent of rims" };
             var rims = new ProductCategory { Id = 1, Name = "Rims", Department = "Rims", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
+            var tires = new ProductCategory { Id = 2, Name = "Tires", Department = "Tires", Description = "Tires are ones of the most important part of your car for safety and efficiency reasons." };
             modelBuilder.Entity<Supplier>().HasData(ronal);
             modelBuilder.Entity<ProductCategory>().HasData(rims);
+            modelBuilder.Entity<ProductCategory>().HasData(tires);
             modelBuilder.Entity<Product>().HasData(new Product { Id = 1, Name = "Alutec Grip Polar", DefaultPrice = 399.0m, Currency = "USD", Description = "Fantastic price for a high quality product. Great and modern design that will make your car look amazing.", ProductCategoryId = 1, SupplierId = 1 });
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

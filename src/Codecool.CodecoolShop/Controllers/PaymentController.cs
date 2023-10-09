@@ -48,7 +48,7 @@ namespace Codecool.CodecoolShop.Controllers
             //System.IO.File.WriteAllText(@"/Users/sofia/Documents/C#/CodeCoolShopS1/src/Codecool.CodecoolShop/JSONFiles/Order.json", OrderDetails);
             string json1 = JsonConvert.SerializeObject(orderDetailsDictionary, Formatting.Indented);
             //string json2 = JsonConvert.SerializeObject(orderDetailsDictionary.ToString());
-            System.IO.File.WriteAllText(@"E:\programowanie\projekty\C#\koszyk\irytujacyKoszyk.json", json1);
+            //System.IO.File.WriteAllText(@"E:\programowanie\projekty\C#\koszyk\irytujacyKoszyk.json", json1);
             //System.IO.File.WriteAllText(@"E:\programowanie\projekty\C#\koszyk\irytujacyKoszyk.json", json2);
 
             return View();
