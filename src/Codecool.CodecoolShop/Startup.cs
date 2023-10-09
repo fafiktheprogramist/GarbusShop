@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Codecool.CodecoolShop.Data;
 using Microsoft.EntityFrameworkCore;
+using Codecool.CodecoolShop.Domain;
 
 namespace Codecool.CodecoolShop
 {
@@ -31,7 +32,8 @@ namespace Codecool.CodecoolShop
         {
             services.AddDbContext<ShopContext>(options =>
     options.UseSqlServer(Configuration.GetConnectionString("Shop")));
-            services.AddControllersWithViews();
+            services.AddScoped<IProductCategoryDao, ProductCategoryDaoEF>();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddSession();
             
         }

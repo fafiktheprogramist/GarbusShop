@@ -1,19 +1,11 @@
-﻿using Codecool.CodecoolShop.Daos.Implementations;
-using Codecool.CodecoolShop.Helpers;
+﻿using Codecool.CodecoolShop.Helpers;
 using Codecool.CodecoolShop.Models;
-using Codecool.CodecoolShop.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml.Linq;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.IO;
-using Newtonsoft.Json;
-using System.Web.Helpers;
 
 namespace Codecool.CodecoolShop.Controllers
 {

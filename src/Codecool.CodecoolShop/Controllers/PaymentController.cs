@@ -1,6 +1,6 @@
 ﻿using System;
 using Codecool.CodecoolShop.Helpers;
-using Codecool.CodecoolShop.Models;
+using Codecool.CodecoolShop.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ using System.Text.Json.Serialization;
 using System.Xml.Linq;
 using System.IO;
 using Newtonsoft.Json;
+using Codecool.CodecoolShop.Models;
 
 namespace Codecool.CodecoolShop.Controllers
 {

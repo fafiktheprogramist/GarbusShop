@@ -7,8 +7,9 @@ using Codecool.CodecoolShop.Daos;
 using Codecool.CodecoolShop.Daos.Implementations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Codecool.CodecoolShop.Models;
+using Codecool.CodecoolShop.Domain;
 using Codecool.CodecoolShop.Services;
+using Codecool.CodecoolShop.Models;
 //using X.PagedList;
 
 namespace Codecool.CodecoolShop.Controllers

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Codecool.CodecoolShop.Models;
+using Codecool.CodecoolShop.Domain;
 
 namespace Codecool.CodecoolShop.Daos.Implementations
 {

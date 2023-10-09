@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using Codecool.CodecoolShop.Domain;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Codecool.CodecoolShop.Models
 {
