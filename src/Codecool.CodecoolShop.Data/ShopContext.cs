@@ -24,8 +24,8 @@ namespace Codecool.CodecoolShop.Data
             var ronal = new Supplier { Id = 1, Name = "Ronal", Description = "Producent of rims" };
             var rims = new ProductCategory { Id = 1, Name = "Rims", Department = "Rims", Description = "Wheel rims are something necessary in your car to make it look impressive and be safe." };
             var tires = new ProductCategory { Id = 2, Name = "Tires", Department = "Tires", Description = "Tires are ones of the most important part of your car for safety and efficiency reasons." };
-            var trunks = new ProductCategory { Id = 3, Name = "trunks", Department = "Trunks", Description = "Things to carry your luggage." };
-            var accesories = new ProductCategory { Id = 4, Name = "accesories", Department = "Accesories", Description = "Various car accessories." };
+            var trunks = new ProductCategory { Id = 3, Name = "Trunks", Department = "Trunks", Description = "Things to carry your luggage." };
+            var accesories = new ProductCategory { Id = 4, Name = "Accesories", Department = "Accesories", Description = "Various car accessories." };
             
             modelBuilder.Entity<Supplier>().HasData(ronal);
             modelBuilder.Entity<ProductCategory>().HasData(rims);
